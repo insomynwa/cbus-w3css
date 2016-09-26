@@ -21,7 +21,7 @@ conditionizr.config({
 <body id="myPage">
 
 <!-- Side Navigation on click -->
-<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none;z-index:2" id="mySidenav">
+<!-- <nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none;z-index:2" id="mySidenav">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-teal">Close
     <i class="fa fa-remove"></i>
   </a>
@@ -30,7 +30,7 @@ conditionizr.config({
   <a href="#">Link 3</a>
   <a href="#">Link 4</a>
   <a href="#">Link 5</a>
-</nav>
+</nav> -->
 
 <!-- Navbar -->
 <div id="cbusnavi" class="w3-top">
@@ -59,25 +59,32 @@ conditionizr.config({
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:43px;">
   <ul class="w3-navbar w3-left-align w3-large w3-theme">
-    <li><a href="#">Link 1</a></li>
+    <li><a href="#services">SERVICES</a></li>
+    <li><a href="#clients">CLIENTS</a></li>
+    <li><a href="#gallery">GALLERY</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+    <!-- <li><a href="#">Link 1</a></li>
     <li><a href="#">Link 2</a></li>
     <li><a href="#">Link 3</a></li>
     <li class="w3-dropdown-hover">
-    <a href="#" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></a>     
-    <div class="w3-dropdown-content w3-light-grey w3-card-4">
-      <a href="#">Link</a>
-      <a href="#">Link</a>
-      <a href="#">Link</a>
-    </div>
-  </li>
+      <a href="#" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></a>     
+      <div class="w3-dropdown-content w3-light-grey w3-card-4">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+      </div>
+    </li> -->
   </ul>
 </div>
 
 <div class="w3-display-container w3-animate-opacity">
-  <img class="testimg w3-animate-fading" src="https://static.wixstatic.com/media/bc7053_b588845759754fa0b85284034f8a0719~mv2_d_2048_1536_s_2.jpg/v1/fill/w_645,h_484,al_c,q_90,usm_0.66_1.00_0.01/bc7053_b588845759754fa0b85284034f8a0719~mv2_d_2048_1536_s_2.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
-  <img class="testimg w3-animate-fading" src="https://static.wixstatic.com/media/bc7053_b0762b1ce1e14c088dcadf1814e3e2e3~mv2.jpg/v1/fill/w_796,h_448,al_c,q_90,usm_0.66_1.00_0.01/bc7053_b0762b1ce1e14c088dcadf1814e3e2e3~mv2.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img id="slide01" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow1']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img id="slide02" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow2']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img id="slide03" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow3']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <!-- <img class="testimg w3-animate-fading" src="https://static.wixstatic.com/media/bc7053_b0762b1ce1e14c088dcadf1814e3e2e3~mv2.jpg/v1/fill/w_796,h_448,al_c,q_90,usm_0.66_1.00_0.01/bc7053_b0762b1ce1e14c088dcadf1814e3e2e3~mv2.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <img class="testimg w3-animate-fading" src="https://static.wixstatic.com/media/bc7053_9150e2f6df5940b88987cd450923f468~mv2.jpg/v1/fill/w_645,h_484,al_c,q_90,usm_0.66_1.00_0.01/bc7053_9150e2f6df5940b88987cd450923f468~mv2.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
-  <img class="testimg w3-animate-fading" src="https://static.wixstatic.com/media/bc7053_7a13d61a48c24c6aaa0b49904bcb4faa~mv2.jpg/v1/fill/w_647,h_484,al_c,q_90,usm_0.66_1.00_0.01/bc7053_7a13d61a48c24c6aaa0b49904bcb4faa~mv2.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img class="testimg w3-animate-fading" src="https://static.wixstatic.com/media/bc7053_7a13d61a48c24c6aaa0b49904bcb4faa~mv2.jpg/v1/fill/w_647,h_484,al_c,q_90,usm_0.66_1.00_0.01/bc7053_7a13d61a48c24c6aaa0b49904bcb4faa~mv2.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;"> -->
   <!-- <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
     <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">LEARN W3.CSS</button>
   </div> -->
@@ -100,7 +107,6 @@ conditionizr.config({
       </footer>
     </div>
 </div> -->
-
 <!-- Services -->
 <div id="services" class="w3-row-padding w3-padding-64 w3-theme-l1">
   <div class="w3-container w3-center">
@@ -165,7 +171,7 @@ conditionizr.config({
     <h2>CLIENTS</h2>
     <h5>Here, at CBUS, we create a one-stop shop solution for clients, which enables us to provide multimedia services from conceptto execution and delivery.</h5>
   </div>
-  <div class="w3-third">
+  <div class="w3-quarter">
     <div class="w3-col">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
@@ -176,7 +182,7 @@ conditionizr.config({
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
   </div>
-  <div class="w3-third">
+  <div class="w3-quarter">
     <div class="w3-col">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
@@ -187,7 +193,18 @@ conditionizr.config({
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
   </div>
-  <div class="w3-third">
+  <div class="w3-quarter">
+    <div class="w3-col">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+  </div>
+  <div class="w3-quarter">
     <div class="w3-col">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
@@ -208,11 +225,12 @@ conditionizr.config({
   <div class="w3-container">
     <h2>GALLERY</h2>
   </div>
-  <div class="w3-quarter">
-    <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
-    <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
-    <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
-    <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+  <?php echo do_shortcode('[envira-gallery id="51"]'); ?>
+  <!-- <div class="w3-quarter">
+    <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%;cursor:pointer" onclick="openModal();currentDiv(1)" class="w3-hover-shadow cursor">
+    <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%;cursor:pointer" onclick="openModal();currentDiv(2)" class="w3-hover-shadow cursor">
+    <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%;cursor:pointer" onclick="openModal();currentDiv(3)" class="w3-hover-shadow cursor">
+    <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%;cursor:pointer" onclick="openModal();currentDiv(4)" class="w3-hover-shadow cursor">
   </div>
   <div class="w3-quarter">
     <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
@@ -231,7 +249,7 @@ conditionizr.config({
     <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
     <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
     <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
-  </div>
+  </div> -->
 </div>
 
 <!-- Clear floats -->
@@ -239,8 +257,10 @@ conditionizr.config({
 
 <!-- ABOUT -->
 <div id="about" class="w3-row-padding w3-center w3-padding-64">
-  <div class="w3-threequarter">
+  <div class="w3-container">
     <h2>ABOUT</h2>
+  </div>
+  <div class="w3-threequarter">
     <p>You might have always wondered as to how to make simple messages interesting, and complex messages simple to communicate. The answer lies at the heart of Multimedia technology. By using the creative magic of Voice, Video, Music, Images, Thought, and Creativity, simple messages can be made captivating, and extremely complex or technical messages can be communicated effectively.
 Here, at CBUS, we create a one-stop shop solution for clients, which enables us to provide multimedia services from conceptto execution and delivery.</p>
   <p>CBUS is made up of creative talent from a variety of disciplines and life experiences. We listen, we think, we strategize. We realize every one is unique and that key insights can come from anyone. Together, we work hard with an unstoppable dedication to integrity and creating success for our clients</p>
@@ -485,7 +505,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <!-- Script For Side Navigation -->
 <script>
-function w3_open() {
+/*function w3_open() {
     var x = document.getElementById("mySidenav");
     x.style.width = "300px";
     x.style.textAlign = "center";
@@ -495,7 +515,7 @@ function w3_open() {
 }
 function w3_close() {
     document.getElementById("mySidenav").style.display = "none";
-}
+}*/
 
 // Used to toggle the menu on smaller screens when clicking on the menu button
 function openNav() {

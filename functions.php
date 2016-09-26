@@ -15,6 +15,17 @@ function cbusw3css_header_scripts() {
 	}
 }
 
+// Load CBUSW3CSS theme-customizer
+function cbusw3css_customizer_live_preview() {
+	wp_enqueue_script(
+		'cbusw3css-theme-customizer',
+		get_template_directory_uri() . '/js/theme-customizer.js',
+		array( 'jquery', 'customize-preview' ),
+		'0.3.0',
+		true
+		);
+}
+add_action('customize_preview_init', 'cbusw3css_customizer_live_preview');
 // Load CBUS w3css styles
 function cbusw3css_styles()
 {
@@ -64,5 +75,72 @@ function cbusw3css_nav()
 	);
 }
 
+/*function cbusw3cssslug_customize_register( $wp_customize) {
+
+	$wp_customize->add_setting( 'cbusw3css_theme_options[slideshow_image]',
+		array(
+			'default'		=> '',
+			'type'			=> 'option',
+			'transport'		=> 'postMessage',
+			'capability'	=> 'edit_theme_options',
+			)
+		);
+
+	$wp_customize->add_control( new WP_Customize_Image_Control(
+		$wp_customize,
+		'cbusw3css_slideshow_image1',
+		array(
+			'label'			=> __('Slideshow1', 'cbusw3css'),
+			'section'		=> 'cbusw3css_slideshow_image',
+			'settings'		=> 'cbusw3css_theme_options[slideshow_image]',
+			)
+		)
+		);
+	$wp_customize->add_control( new WP_Customize_Image_Control(
+		$wp_customize,
+		'cbusw3css_slideshow_image2',
+		array(
+			'label'			=> __('Slideshow2', 'cbusw3css'),
+			'section'		=> 'cbusw3css_slideshow_image',
+			'settings'		=> 'cbusw3css_theme_options[slideshow_image]',
+			)
+		)
+		);
+
+	$wp_customize->add_section( 'cbusw3css_color_scheme',
+		array(
+			'title'		=> __( 'Color Scheme', 'cbusw3css'),
+			'priority'	=> 35,
+			)
+		);
+
+	$wp_customize->add_setting( 'cbusw3css_theme_options[color_scheme]',
+		array(
+			'default'		=> 'w3-theme-black',
+			'type'			=> 'option',
+			'capability'	=> 'edit_theme_options',
+			)
+		);
+
+	$wp_customize->add_control( 'cbusw3css_color_scheme',
+		array(
+			'label'			=> __('Color Scheme', 'cbusw3css'),
+			'section'		=> 'cbusw3css_color_scheme',
+			'settings'		=> 'cbusw3css_theme_options[color_scheme]',
+			'type'			=> 'radio',
+			'choices'		=> array(
+				'value1'	=> 'Choice 1',
+				'value2'	=> 'Choice 2',
+				'value3'	=> 'Choice 3',
+				),
+			)
+		);
+}
+add_action( 'customize_register', 'cbusw3cssslug_customize_register');*/
+
 require_once get_template_directory().'/inc/CSS_Menu_Walker.php';
+require get_stylesheet_directory() . '/inc/cbusw3css_customizer.php';
+
+new CBUSw3css_customizer();
+
 ?>
