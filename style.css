@@ -1,0 +1,57 @@
+#cbusnavi .w3-navbar {
+    background-color:rgba(0,0,0,.9);
+}
+    #cbusnavi .w3-navbar li a {
+        color: #ffffff;
+    }
+
+    #cbusnavi .w3-navbar li a:hover {
+        background-color:orangered;
+    }
+
+    #cbusnavi .w3-navbar li a.active {
+        background-color:green;
+    }
+
+#navDemo .w3-navbar {
+    background-color:rgba(0,0,0,.9);
+}
+    #navDemo .w3-navbar li a {
+        color: #ffffff;
+    }
+
+    #navDemo .w3-navbar li a:hover {
+        background-color:orangered;
+    }
+
+    #navDemo .w3-navbar li a.active {
+        background-color:green;
+    }
+
+.w3-theme-d5 {
+    color:#fff !important; 
+    background-color:#222222 !important;
+}
+    .w3-theme-d5 h2 {
+        color:orangered;
+    }
+    .w3-theme-d5 h3 {
+        color:green;
+    }
+    .w3-theme-d5 h4 {
+        color:orange;
+    }
+.w3-theme-l1 {
+    background-color:green !important;
+    color:#ffffff !important;
+}
+
+.cbus-color-orange {
+    color:orange;
+}
+.cbus-color-orangered {
+    color:orangered;
+}
+.cbus-color-green {
+    color:green;
+}

@@ -33,7 +33,7 @@ function cbusw3css_styles()
     wp_register_style('w3css', 'http://www.w3schools.com/lib/w3.css', array(), '1.0', 'all');
     wp_enqueue_style('w3css'); // Enqueue it!
 
-    wp_register_style('w3css-theme', 'http://www.w3schools.com/lib/w3-theme-black.css', array(), '', 'all');
+    wp_register_style('w3css-theme', 'http://www.w3schools.com/lib/w3-theme-orange.css', array(), '', 'all');
     wp_enqueue_style('w3css-theme'); // Enqueue it!
 
     wp_register_style('font-awesome', 'http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', array(), '', 'all');
