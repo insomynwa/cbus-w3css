@@ -6,7 +6,7 @@
   <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
     <a class="w3-large w3-padding-16" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   </li>
-  <li><a href="#" class="w3-padding-16"><i class="fa fa-home w3-margin-right"></i>CBUS</a></li>
+  <li><a href="#" class="w3-padding-16 navilogo"><i class="fa fa-home w3-margin-right"></i>CBUS</a></li>
   <li class="w3-hide-small"><a href="#services" class="w3-padding-16">SERVICES</a></li>
   <li class="w3-hide-small"><a href="#clients" class="w3-padding-16">CLIENTS</a></li>
   <li class="w3-hide-small"><a href="#gallery" class="w3-padding-16">GALLERY</a></li>

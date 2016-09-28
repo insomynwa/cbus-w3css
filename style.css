@@ -1,4 +1,4 @@
-#cbusnavi .w3-navbar {
+/*#cbusnavi .w3-navbar {
     background-color:rgba(0,0,0,.9);
 }
     #cbusnavi .w3-navbar li a {
@@ -7,13 +7,9 @@
 
     #cbusnavi .w3-navbar li a:hover {
         background-color:orangered;
-    }
+    }*/
 
-    #cbusnavi .w3-navbar li a.active {
-        background-color:green;
-    }
-
-#navDemo .w3-navbar {
+/*#navDemo .w3-navbar {
     background-color:rgba(0,0,0,.9);
 }
     #navDemo .w3-navbar li a {
@@ -22,11 +18,7 @@
 
     #navDemo .w3-navbar li a:hover {
         background-color:orangered;
-    }
-
-    #navDemo .w3-navbar li a.active {
-        background-color:green;
-    }
+    }*/
 
 .w3-theme-d5 {
     color:#fff !important; 
