@@ -39,7 +39,32 @@
     <h2>SERVICES</h2>
     <h5>With technology advancing at a rapid pace and constant changes taking place in the development community, we continuously evaluate the most recent trends that are creating a buzz in the development community. Therefore, CBUS offers various types of multimedia services such as</h5>
   </div>
-  <div class="w3-third">
+  <?php
+    if(get_query_var('paged') ) $paged = get_query_var('paged');
+    if(get_query_var('page') ) $paged = get_query_var('page');
+
+    $query = new WP_Query(
+      array(
+        'post_type' => 'cbus_services',
+        'paged'     => $paged
+        )
+      );
+
+    if( $query->have_posts() ) : ?>
+      <?php 
+      // $max_n_col = 3;
+      // $n_post = wp_count_posts('cbus_services')->publish;
+      // $max_post_pcol = 0;
+      while ( $query->have_posts() ) : $query->the_post(); ?>
+        <div class="w3-third">
+            <h3><?php the_title(); ?></h3>
+            <p><?php the_content(); ?></p>
+        </div>
+      <?php endwhile; wp_reset_postdata(); ?>
+    <?php else: ?>
+
+    <?php endif; ?>
+  <!-- <div class="w3-third">
     <div class="">
       <h3>MULTIMEDIA SOLUTION</h3>
       <p>CBUS has a fully integrated production team who are prepared to create brilliance for you. Computer Graphics specialists are available to design and create on-screen presentations for any part of your event. From initial background looks and designs to full presentation</p>
@@ -85,7 +110,7 @@
       <h3>AERIAL FOTO & VIDEO</h3>
       <p>Using radio controlled drone aircraft we supply superb quality images and video to provide a complete overview of the commercial and residential property.  This will make them much more attractive to potential clients.</p>
     </div>
-  </div>
+  </div> -->
 </div>
 
 <!-- Clients -->
