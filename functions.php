@@ -139,9 +139,9 @@ function cbusw3css_nav()
 }
 add_action( 'customize_register', 'cbusw3cssslug_customize_register');*/
 
-function cbus_service() {
-	if(!class_exists(CBUS_Service_Model)) echo "DAAAAAAAAAAAAAMN";
-}
+// function cbus_service() {
+// 	if(!class_exists(CBUS_Service_Model)) echo "DAAAAAAAAAAAAAMN";
+// }
 
 require_once get_template_directory().'/inc/CSS_Menu_Walker.php';
 require get_stylesheet_directory() . '/inc/cbusw3css_customizer.php';

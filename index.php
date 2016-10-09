@@ -31,6 +31,9 @@
   <img id="slide01" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow1']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <img id="slide02" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow2']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <img id="slide03" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow3']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img id="slide04" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow4']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img id="slide05" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow5']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img id="slide06" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow6']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
 </div>
 
 <!-- Services -->
@@ -52,9 +55,6 @@
 
     if( $query->have_posts() ) : ?>
       <?php 
-      // $max_n_col = 3;
-      // $n_post = wp_count_posts('cbus_services')->publish;
-      // $max_post_pcol = 0;
       while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="w3-third">
             <h3><?php the_title(); ?></h3>
@@ -64,53 +64,6 @@
     <?php else: ?>
 
     <?php endif; ?>
-  <!-- <div class="w3-third">
-    <div class="">
-      <h3>MULTIMEDIA SOLUTION</h3>
-      <p>CBUS has a fully integrated production team who are prepared to create brilliance for you. Computer Graphics specialists are available to design and create on-screen presentations for any part of your event. From initial background looks and designs to full presentation</p>
-    </div>
-    <div class="">
-      <h3>VIDEO PRODUCTION</h3>
-      <p>In house video crew who shoot on location as well as edit content ensures continuity of service in both standard and high definition.</p>
-    </div>
-    <div class="">
-      <h3>WEB PROGRAMMING</h3>
-      <p>CBUS offers a wide array of web programming services specifically tailored to meet clients’ business needs.  Our programmers will guide you every step of the way to determine the primary aim of your website, target audience and how to maintain your website.</p>
-    </div>
-  </div>
-  <div class="w3-third">
-    <div class="">
-      <h3>MULTIMEDIA</h3>
-      <h4>EQUIPMENT RENTAL</h4>
-      <p>Whether you need immediate solutions, comprehensive responses to Requests for Proposals (RFPs) or something in between, CBUS will provide a premium solution.   As a nimble, boutique business, CBUS will continue to grow and adapt to serve the equipment rental and production needs of the entire live event industry.</p>
-    </div>
-    <div class="">
-      <h3>LIVE STREAMING</h3>
-      <p>In house Video Conference is available using IP transmission. Full HD transmission is also available. Additional units are available for off site use in boardroom environment or within a large conference setup.</p>
-    </div>
-    <div class="">
-      <h3>PROJECTION MAPPING</h3>
-      <p>The right projector will lend extra authenticity and professionalism to any lecture or speech. Make sure you get only the best A/V equipment to secure your valuable moments.</p>
-    </div>
-  </div>
-  <div class="w3-third">
-    <div class="">
-      <h3>MOTION GRAPHIC</h3>
-      <p>Our talented designers are specialists in stylising creative corporate presentations.</p>
-    </div>
-    <div class="">
-      <h3>EDGE BLENDING SYSTEM</h3>
-      <p>Do you want to display videos and images using more than one projector? Do you want to adapt contents on various projection screens, but you don’t need the overhead of a “big media server”? CBUS offers a timeline based media server</p>
-    </div>
-    <div class="">
-      <h3>3D ANIMATION</h3>
-      <p>I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.​</p>
-    </div>
-    <div class="">
-      <h3>AERIAL FOTO & VIDEO</h3>
-      <p>Using radio controlled drone aircraft we supply superb quality images and video to provide a complete overview of the commercial and residential property.  This will make them much more attractive to potential clients.</p>
-    </div>
-  </div> -->
 </div>
 
 <!-- Clients -->
@@ -119,47 +72,71 @@
     <h2>CLIENTS</h2>
     <h5>Here, at CBUS, we create a one-stop shop solution for clients, which enables us to provide multimedia services from conceptto execution and delivery.</h5>
   </div>
-  <div class="w3-quarter">
-    <div class="w3-col">
+  <div class="w3-row">
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
-    <div class="w3-col">
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
-    <div class="w3-col">
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
-  </div>
-  <div class="w3-quarter">
-    <div class="w3-col">
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
-    <div class="w3-col">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-    <div class="w3-col">
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
   </div>
-  <div class="w3-quarter">
-    <div class="w3-col">
+  <div class="w3-row">
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
-    <div class="w3-col">
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
-    <div class="w3-col">
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
   </div>
-  <div class="w3-quarter">
-    <div class="w3-col">
+  <div class="w3-row">
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
-    <div class="w3-col">
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
-    <div class="w3-col">
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+  </div>
+  <div class="w3-row">
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    </div>
+    <div class="w3-col" style="width:20%">
       <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
     </div>
   </div>
@@ -202,12 +179,15 @@
     <div class="w3-padding-16"><span class="w3-xlarge w3-bottombar">Contact Us</span></div>
       <h3>Address</h3>
       <p>Swing by for a cup of coffee, or whatever.</p>
-      <p><i class="fa fa-map-marker w3-xlarge cbus-color-orange"></i> Komplek Tytyan Kencana</p>
-      <p><i class="fa fa-phone w3-xlarge cbus-color-orange"></i>  +00 1515151515</p>
-      <p><i class="fa fa-envelope-o w3-xlarge cbus-color-orange"></i>  seagate@test.com</p>
+      <p><i class="fa fa-home w3-xlarge cbus-color-orange"></i> Komplek Tytyan Kencana </p>
+      <!-- <p><i class="fa fa-phone w3-xlarge cbus-color-orange"></i>  +00 1515151515</p> -->
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Kavling Haji Ukar No. 24</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; Marga Mulya</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp; 17126, Bekasi Utara</p>
+      <p><i class="fa fa-envelope-o w3-xlarge cbus-color-orange"></i> seagate80kg@gmail.com</p>
     </div>
     <div class="w3-col m7">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white">
+      <!-- <form class="w3-container w3-card-4 w3-padding-16 w3-white">
       <div class="w3-group">      
         <label class="w3-label">Name</label>
         <input class="w3-input" type="text">
@@ -223,36 +203,38 @@
       <input class="w3-check" type="checkbox" checked>
       <label class="w3-validate">I Like it!</label>
       <button type="button" class="w3-btn w3-right w3-theme-l1">Send</button>
-      </form>
+      </form> -->
+      <?php echo do_shortcode('[pirate_forms]'); ?>
     </div>
   </div>
 </div>
 
 <!-- Google Maps -->
-<div id="googleMap" style="width:100%;height:420px;"></div>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
+<?php  echo do_shortcode('[wpgmza id="1"]'); ?>
+<!-- <div id="googleMap" style="width:100%;height:420px;"></div >-->
+<!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
 <script>
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+// var myCenter = new google.maps.LatLng(41.878114, -87.629798);
 
-function initialize() {
-var mapProp = {
-  center: myCenter,
-  zoom: 5,
-  scrollwheel: false,
-  draggable: false,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
+// function initialize() {
+// var mapProp = {
+//   center: myCenter,
+//   zoom: 5,
+//   scrollwheel: false,
+//   draggable: false,
+//   mapTypeId: google.maps.MapTypeId.ROADMAP
+//   };
 
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+// var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-var marker = new google.maps.Marker({
-  position: myCenter,
-});
+// var marker = new google.maps.Marker({
+//   position: myCenter,
+// });
 
-marker.setMap(map);
-}
+// marker.setMap(map);
+// }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+// google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
 <?php get_footer(); ?>

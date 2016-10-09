@@ -20,5 +20,23 @@
 			$("#slide03").attr('src', to );
 		});
 	});
+	wp.customize('cbusw3css_theme_option[main_slideshow4]', function( value ) {
+		value.bind(function(to) {
+			//console.log(to);
+			$("#slide04").attr('src', to );
+		});
+	});
+	wp.customize('cbusw3css_theme_option[main_slideshow5]', function( value ) {
+		value.bind(function(to) {
+			//console.log(to);
+			$("#slide05").attr('src', to );
+		});
+	});
+	wp.customize('cbusw3css_theme_option[main_slideshow6]', function( value ) {
+		value.bind(function(to) {
+			//console.log(to);
+			$("#slide06").attr('src', to );
+		});
+	});
 
 })(jQuery);

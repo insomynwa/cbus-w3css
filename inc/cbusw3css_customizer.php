@@ -214,6 +214,66 @@ class CBUSw3css_customizer {
 					)
 				)
 		);
+		$wp_customize->add_setting( 'cbusw3css_theme_option[main_slideshow4]',
+		array(
+			'default'		=> '',
+			'type'			=> 'option',
+			'transport'		=> 'postMessage',
+			'capability'	=> 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control( 
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'cbusw3css_main_slideshow4',
+				array(
+					'label'			=> __('Slideshow 4', 'cbusw3css'),
+					'section'		=> 'cbusw3css_slideshow',
+					'settings'		=> 'cbusw3css_theme_option[main_slideshow4]',
+					)
+				)
+		);
+		$wp_customize->add_setting( 'cbusw3css_theme_option[main_slideshow5]',
+		array(
+			'default'		=> '',
+			'type'			=> 'option',
+			'transport'		=> 'postMessage',
+			'capability'	=> 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control( 
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'cbusw3css_main_slideshow5',
+				array(
+					'label'			=> __('Slideshow 5', 'cbusw3css'),
+					'section'		=> 'cbusw3css_slideshow',
+					'settings'		=> 'cbusw3css_theme_option[main_slideshow5]',
+					)
+				)
+		);
+		$wp_customize->add_setting( 'cbusw3css_theme_option[main_slideshow6]',
+		array(
+			'default'		=> '',
+			'type'			=> 'option',
+			'transport'		=> 'postMessage',
+			'capability'	=> 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control( 
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'cbusw3css_main_slideshow6',
+				array(
+					'label'			=> __('Slideshow 6', 'cbusw3css'),
+					'section'		=> 'cbusw3css_slideshow',
+					'settings'		=> 'cbusw3css_theme_option[main_slideshow6]',
+					)
+				)
+		);
 		/* =================================================================== */
 	}
 
