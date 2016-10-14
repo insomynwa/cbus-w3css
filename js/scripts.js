@@ -7,6 +7,9 @@
 		// DOM ready, take it away
 		$("a.ascroll").click( function(e) {
 			e.preventDefault();
+			if( $("#navDemo").hasClass('w3-show') ) {
+				$("#navDemo").removeClass('w3-show');
+			}
 			var targetID = $(this).attr('href');
 			$("html, body").animate( {
 				scrollTop: $(""+targetID).offset().top

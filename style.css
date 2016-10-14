@@ -24,26 +24,49 @@
     color:#fff !important; 
     background-color:#222222 !important;
 }
+
     .w3-theme-d5 h2 {
-        color:orangered;
+        color:#FF4500;
     }
+
     .w3-theme-d5 h3 {
-        color:green;
+        color:#008000;
     }
+
     .w3-theme-d5 h4 {
         color:orange;
     }
+
 .w3-theme-l1 {
-    background-color:green !important;
+    background-color:#008000 !important;
     color:#ffffff !important;
 }
 
 .cbus-color-orange {
     color:orange;
 }
+
 .cbus-color-orangered {
-    color:orangered;
+    color:#FF4500;
 }
+
 .cbus-color-green {
-    color:green;
+    color:#008000;
+}
+
+#cbusslogan {
+    position:absolute;left:0;bottom:0;
+}
+
+#cbusslogan p {
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    #cbusslogan {
+        position:absolute;left:0;bottom:0;width:100%;text-align:center;
+    }
+    #cbusslogan p {
+        font-size: 12px;
+    }
 }

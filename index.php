@@ -18,11 +18,11 @@
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top w3-padding-16" style="margin-top:43px;">
   <ul class="w3-navbar w3-left-align w3-large">
-    <li><a href="#services">SERVICES</a></li>
-    <li><a href="#clients">CLIENTS</a></li>
-    <li><a href="#gallery">GALLERY</a></li>
-    <li><a href="#about">ABOUT</a></li>
-    <li><a href="#contact">CONTACT</a></li>
+    <li><a class="ascroll" href="#services">SERVICES</a></li>
+    <li><a class="ascroll" href="#clients">CLIENTS</a></li>
+    <li><a class="ascroll" href="#gallery">GALLERY</a></li>
+    <li><a class="ascroll" href="#about">ABOUT</a></li>
+    <li><a class="ascroll" href="#contact">CONTACT</a></li>
   </ul>
 </div>
 
@@ -34,6 +34,9 @@
   <img id="slide04" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow4']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <img id="slide05" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow5']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <img id="slide06" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow6']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <div id="cbusslogan" class="w3-padding w3-orange w3-tag w3-margin-bottom w3-opacity">
+    <p class="w3-text-white">CREATING BRIGHT UNSTOPPABLE SUCCESS</p>
+  </div>
 </div>
 
 <!-- Services -->
