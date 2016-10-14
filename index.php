@@ -6,12 +6,12 @@
   <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
     <a class="w3-large w3-padding-16" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   </li>
-  <li><a href="#" class="w3-padding-16 navilogo"><i class="fa fa-home w3-margin-right"></i>CBUS</a></li>
-  <li class="w3-hide-small"><a href="#services" class="w3-padding-16">SERVICES</a></li>
-  <li class="w3-hide-small"><a href="#clients" class="w3-padding-16">CLIENTS</a></li>
-  <li class="w3-hide-small"><a href="#gallery" class="w3-padding-16">GALLERY</a></li>
-  <li class="w3-hide-small"><a href="#about" class="w3-padding-16">ABOUT</a></li>
-  <li class="w3-hide-small"><a href="#contact" class="w3-padding-16">CONTACT</a></li>
+  <li><a href="#cbusslideshow" class="w3-padding-16 navilogo ascroll"><i class="fa fa-home w3-margin-right"></i>CBUS</a></li>
+  <li class="w3-hide-small"><a href="#services" class="w3-padding-16 ascroll">SERVICES</a></li>
+  <li class="w3-hide-small"><a href="#clients" class="w3-padding-16 ascroll">CLIENTS</a></li>
+  <li class="w3-hide-small"><a href="#gallery" class="w3-padding-16 ascroll">GALLERY</a></li>
+  <li class="w3-hide-small"><a href="#about" class="w3-padding-16 ascroll">ABOUT</a></li>
+  <li class="w3-hide-small"><a href="#contact" class="w3-padding-16 ascroll">CONTACT</a></li>
  </ul>
 </div>
 
@@ -27,7 +27,7 @@
 </div>
 
 <!-- Main Slideshow -->
-<div class="w3-display-container w3-animate-opacity">
+<div id="cbusslideshow" class="w3-display-container w3-animate-opacity">
   <img id="slide01" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow1']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <img id="slide02" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow2']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <img id="slide03" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow3']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
@@ -37,8 +37,8 @@
 </div>
 
 <!-- Services -->
-<div id="services" class="w3-row-padding w3-padding-64 w3-theme-d5">
-  <div class="w3-container w3-center">
+<div id="services" class="w3-row-padding w3-padding-64 w3-center w3-theme-d5">
+  <div class="w3-container">
     <h2>SERVICES</h2>
     <h5>With technology advancing at a rapid pace and constant changes taking place in the development community, we continuously evaluate the most recent trends that are creating a buzz in the development community. Therefore, CBUS offers various types of multimedia services such as</h5>
   </div>
@@ -72,75 +72,105 @@
     <h2>CLIENTS</h2>
     <h5>Here, at CBUS, we create a one-stop shop solution for clients, which enables us to provide multimedia services from conceptto execution and delivery.</h5>
   </div>
-  <div class="w3-row">
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+  <?php
+    if(get_query_var('paged') ) $paged = get_query_var('paged');
+    if(get_query_var('page') ) $paged = get_query_var('page');
+
+    $query = new WP_Query(
+      array(
+        'post_type' => 'cbus_clients',
+        'paged'     => $paged
+        )
+      );
+    $max_col = 5;
+    $step_post = 1;
+    $n_post = wp_count_posts('cbus_clients')->publish;
+    //var_dump($n_post);
+    if( $query->have_posts() ) : ?>
+      <?php 
+      while ( $query->have_posts() ) : ?>
+      <div class="w3-row-padding">
+      <?php for( $i=0; $i<$max_col; $i++): $query->the_post(); ?>
+        <div id="cbusclient-img" class="w3-col" style="width:20%">
+          <?php the_content(); ?>
+          <?php $step_post ++; ?>
+        </div>
+        <?php if($step_post>$n_post) break; ?>
+      <?php endfor; ?>
+      </div>
+      <?php endwhile; wp_reset_postdata(); ?>
+    <?php else: ?>
+
+    <?php endif; ?>
+  <!-- <div class="w3-row-padding">
+    <div class="w3-col m3">
+      <img src="http://localhost:81/CBUS/wp-content/uploads/2016/09/aA1KAop_460s-200x300.jpg" style="width:100%">
     </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    <div class="w3-col m3">
+      <img src="http://localhost:81/CBUS/wp-content/uploads/2016/09/a0pq3ed_460s-300x291.jpg" style="width:100%">
     </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    <div class="w3-col m3 w3-card">
+      <img src="http://localhost:81/CBUS/wp-content/uploads/2016/09/aA1KAop_460s-200x300.jpg" style="max-height:100px;">
     </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    <div class="w3-col m3 w3-card">
+      <img src="http://localhost:81/CBUS/wp-content/uploads/2016/09/a0pq3ed_460s-300x291.jpg" style="max-height:100px;">
     </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-  </div>
-  <div class="w3-row">
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-  </div>
-  <div class="w3-row">
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
-    </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    <div class="w3-col m3">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="max-height:100px;">
     </div>
   </div>
-  <div class="w3-row">
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+  <div class="w3-row-padding">
+    <div class="w3-col w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
     </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    <div class="w3-col w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
     </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    <div class="w3-col w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
     </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    <div class="w3-col w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
     </div>
-    <div class="w3-col" style="width:20%">
-      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif">
+    <div class="w3-col w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
     </div>
   </div>
-</div>
+  <div class="w3-row-padding">
+    <div class="w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+    <div class="w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+    <div class="w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+    <div class="w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+    <div class="w3-card" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+    <div class="w3-col" style="width:20%">
+      <img src="http://seeklogo.com/images/T/telkomsel-logo-70552E9308-seeklogo.com.gif" style="width:100%">
+    </div>
+  </div> -->
+</div><!-- end #clients -->
 
 <!-- Gallery -->
 <div id="gallery" class="w3-row w3-center w3-padding-64 w3-theme-d5">

@@ -9,7 +9,7 @@
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
     <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
-    <a class="w3-btn w3-theme" href="#myPage"><span class="w3-xlarge">
+    <a class="w3-btn w3-theme ascroll" href="#myPage"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
