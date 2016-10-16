@@ -9,6 +9,16 @@ class CBUSw3css_customizer {
 	}
 
 	public function register_customizer_sections( $wp_customize ) {
+
+		// SLOGAN
+		$wp_customize->add_section( 'cbusw3css_slogan',
+			array(
+				'title'			=> __('Slogan', 'cbusw3css'),
+				'description'	=> 'CBUS slogan',
+				'priority'		=> 21,
+				)
+			);
+
 		// Menu Color
 		$wp_customize->add_section( 'cbusw3css_menu_color',
 		array(
@@ -27,8 +37,74 @@ class CBUSw3css_customizer {
 			)
 		);
 
+		$this->cbusw3css_slogan_section( $wp_customize );
 		$this->cbusw3css_menu_color_section( $wp_customize );
 		$this->cbusw3css_slideshow_image_section( $wp_customize );
+	}
+
+	private function cbusw3css_slogan_section( $wp_customize ) {
+		//SLOGAN TEXT
+		$wp_customize->add_setting( 'cbusw3css_theme_option[slogan_text]',
+			array(
+				'default'		=> 'CREATING BRIGHT UNSTOPPABLE SUCCESS',
+				'type'			=> 'option',
+				'transport'		=> 'refresh',
+				'capability'	=> 'edit_theme_options',
+				)
+			);
+
+		$wp_customize->add_control('cbusw3css_slogan_text',
+			array(
+				'settings'		=> 'cbusw3css_theme_option[slogan_text]',
+				'label'			=> __('Slogan', 'cbusw3css'),
+				'section'		=> 'cbusw3css_slogan',
+				'type'			=> 'text'
+				)
+			);
+
+		// SLOGAN BG COLOR
+		$wp_customize->add_setting('cbusw3css_theme_option[slogan_background_color]',
+			array(
+				'default'	=> '#FF9800',
+				'type'		=> 'option',
+				'transport'	=> 'refresh',
+				'capability'	=> 'edit_theme_options'
+				)
+			);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cbusw3css_slogan_background_color',
+				array(
+					'label'		=> __('Background', 'cbusw3css'),
+					'section'	=> 'cbusw3css_slogan',
+					'settings'	=> 'cbusw3css_theme_option[slogan_background_color]'
+					)
+				)
+			);
+
+		// SLOGAN TEXT COLOR
+		$wp_customize->add_setting('cbusw3css_theme_option[slogan_text_color]',
+			array(
+				'default'	=> '#FFFFFF',
+				'type'		=> 'option',
+				'transport'	=> 'refresh',
+				'capability'	=> 'edit_theme_options'
+				)
+			);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'cbusw3css_slogan_text_color',
+				array(
+					'label'		=> __('Text Color', 'cbusw3css'),
+					'section'	=> 'cbusw3css_slogan',
+					'settings'	=> 'cbusw3css_theme_option[slogan_text_color]'
+					)
+				)
+			);
 	}
 
 	private function cbusw3css_menu_color_section( $wp_customize ) {
@@ -303,6 +379,13 @@ class CBUSw3css_customizer {
 	        background-color: <?php echo get_option('cbusw3css_theme_option')['menu_text_background_hover_color']; ?>;
 	        color:  <?php echo get_option('cbusw3css_theme_option')['menu_text_hover_color']; ?>;
 	    }
+
+	#cbusslogan {
+		background-color: <?php echo get_option('cbusw3css_theme_option')['slogan_background_color']; ?>;
+	}
+		#cbusslogan p {
+			color:<?php echo get_option('cbusw3css_theme_option')['slogan_text_color']; ?>;
+		}
 	</style>
 	<?php
 	}

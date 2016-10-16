@@ -1,6 +1,13 @@
 (function($){
 	'use strict';
 
+	// SLOGAN
+	wp.customize('cbusw3css_theme_option[slogan_text]', function (value) {
+		value.bind(function(to){
+			$("#cbusslogan p").text(to);
+		});
+	});
+
 	// SLIDESHOW
 	wp.customize('cbusw3css_theme_option[main_slideshow1]', function( value ) {
 		value.bind(function(to) {

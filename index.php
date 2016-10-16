@@ -34,8 +34,8 @@
   <img id="slide04" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow4']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <img id="slide05" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow5']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <img id="slide06" class="testimg w3-animate-fading" src="<?php echo get_option('cbusw3css_theme_option')['main_slideshow6']; ?>" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
-  <div id="cbusslogan" class="w3-padding w3-orange w3-tag w3-margin-bottom w3-opacity">
-    <p class="w3-text-white">CREATING BRIGHT UNSTOPPABLE SUCCESS</p>
+  <div id="cbusslogan" class="w3-padding w3-tag w3-margin-bottom w3-opacity">
+    <p class=""><?php echo get_option('cbusw3css_theme_option')['slogan_text']; ?></p>
   </div>
 </div>
 

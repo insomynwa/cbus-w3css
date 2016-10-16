@@ -3,6 +3,7 @@
   <h4>Follow Us</h4>
   <a class="w3-btn-floating w3-teal" href="https://www.facebook.com/cbus.multimedia" title="Facebook"><i class="fa fa-facebook"></i></a>
   <a class="w3-btn-floating w3-teal" href="http://www.twitter.com/seagate80kg" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-btn-floating w3-teal" href="https://www.youtube.com/user/cbusmultimedia" title="youtube"><i class="fa fa-youtube-play"></i></a>
   <!-- <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
   <a class="w3-btn-floating w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a> -->
   <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
