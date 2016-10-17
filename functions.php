@@ -3,6 +3,9 @@
 // Load CBUS w3Css scripts (header.php)
 function cbusw3css_header_scripts() {
 	if( $GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+		wp_register_script('bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7'); // Conditionizr
+        wp_enqueue_script('bootstrap-js'); // Enqueue it!
+
 		wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
         wp_enqueue_script('conditionizr'); // Enqueue it!
 
@@ -29,15 +32,24 @@ function cbusw3css_customizer_live_preview() {
 function cbusw3css_styles()
 {
 
-    //wp_register_style('w3css', 'http://www.w3schools.com/lib/w3.css', array(), '1.0', 'all');
-    wp_register_style('w3css', get_template_directory_uri() . '/css/w3.css', array(), '1.0', 'all');
-    wp_enqueue_style('w3css'); // Enqueue it!
+    // wp_register_style('w3css', 'http://www.w3schools.com/lib/w3.css', array(), '1.0', 'all');
+    // wp_register_style('w3css', get_template_directory_uri() . '/css/w3.css', array(), '1.0', 'all');
+    // wp_enqueue_style('w3css'); // Enqueue it!
 
-    wp_register_style('w3css-theme', 'http://www.w3schools.com/lib/w3-theme-orange.css', array(), '', 'all');
-    wp_enqueue_style('w3css-theme'); // Enqueue it!
+    // wp_register_style('w3css-theme', 'http://www.w3schools.com/lib/w3-theme-orange.css', array(), '', 'all');
+    // wp_enqueue_style('w3css-theme'); // Enqueue it!
 
     wp_register_style('font-awesome', 'http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', array(), '', 'all');
     wp_enqueue_style('font-awesome'); // Enqueue it!
+
+    wp_register_style('Montserrat', '//fonts.googleapis.com/css?family=Montserrat', array(), '', 'all');
+    wp_enqueue_style('Montserrat'); // Enqueue it!
+
+    wp_register_style('Lato', '//fonts.googleapis.com/css?family=Lato', array(), '', 'all');
+    wp_enqueue_style('Lato'); // Enqueue it!
+
+    wp_register_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '', 'all');
+    wp_enqueue_style('bootstrap'); // Enqueue it!
 
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!

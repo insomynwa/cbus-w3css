@@ -356,18 +356,18 @@ class CBUSw3css_customizer {
 	public function cbusw3css_customizer_css() {
 	?>
 	<style type="text/css">
-	#cbusnavi .w3-navbar {
+	#cbusnavi.navbar {
 		background-color: <?php echo get_option('cbusw3css_theme_option')['menu_background_color']; ?>;
 	}
-		#cbusnavi .w3-navbar li a {
-			color: <?php echo get_option('cbusw3css_theme_option')['menu_text_color']; ?>;
+		#cbusnavi.navbar li a, #cbusnavi.navbar .navbar-brand {
+			color: <?php echo get_option('cbusw3css_theme_option')['menu_text_color']; ?> !important;
 		}
 	    #cbusnavi .w3-navbar li a.navilogo {
 			background-color: <?php echo get_option('cbusw3css_theme_option')['menu_logo_background_color']; ?>;
 		}
-		#cbusnavi .w3-navbar li a:hover {
-	        background-color: <?php echo get_option('cbusw3css_theme_option')['menu_text_background_hover_color']; ?>;
-	        color:  <?php echo get_option('cbusw3css_theme_option')['menu_text_hover_color']; ?>;
+		#cbusnavi .navbar-nav li a:hover, #cbusnavi .navbar-nav li.active a {
+	        background-color: <?php echo get_option('cbusw3css_theme_option')['menu_text_background_hover_color']; ?> !important;
+	        color:  <?php echo get_option('cbusw3css_theme_option')['menu_text_hover_color']; ?> !important;
 	    }
 	#navDemo .w3-navbar {
 		background-color: <?php echo get_option('cbusw3css_theme_option')['menu_background_color']; ?>;
