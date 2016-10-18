@@ -29,7 +29,7 @@ body {
   }
   .container-small {
       max-width: 100%;
-      padding-top:60px;
+      padding-top:50px;
       padding-bottom:60px;
   }
   .bg-grey {
@@ -161,7 +161,6 @@ body {
         left: 0;
         margin-bottom:16px;
         margin-left:16px;
-        opacity: .7;
     }
       #cbusslogan p {
         margin: 0;
@@ -169,16 +168,59 @@ body {
       }
 
   #about {
-      background-color: #575757;
+      background-color: #FF9800;
       color:#eeeeee;
   }
-    #about h2, h4 {
+    #about h2, #about h4 {
         color:#ffffff;
     }
 
   #services {
-      background-color: #777777;
+      background-color: #747575;
+      color: #F8F5EE;
   }
+    #services h2 {
+      color: #FFFF55;
+    }
+    #services h4 {
+      color: #F8F5EE;
+    }
+    #services h4.subtitle {
+      color: #FFFF55;
+    }
+
+  #gallery {
+    background-color: #000000;
+  }
+    #gallery h2 {
+      color: #dddddd;
+    }
+
+  #clients {
+    background-color: #44D302;
+  }
+
+  #clients h2, #clients h4 {
+    color: #FFFF00
+  }
+
+  #contact {
+    background-color:#548939;
+    color: #FFFF55;
+  }
+    #contact h2 {
+      color: #FFFF55;
+    }
+
+  #footer {
+    background-color: #051A37;
+  }
+    #footer .to-top {
+      color: #7FFFFF;
+    }
+    #footer h4 {
+      color: #7FFFFF;
+    }
 
   .carousel-inner > .item > img,
     .carousel-inner > .item > a > img {

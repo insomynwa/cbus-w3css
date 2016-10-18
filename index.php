@@ -129,7 +129,7 @@
       <div class="row slideanim">
       <?php for( $i=0; $i<$max_col; $i++): $query->the_post(); ?>
         <div class="col-sm-4">
-          <h4><?php the_title(); ?></h4>
+          <h4 class="subtitle"><?php the_title(); ?></h4>
           <p><?php the_content(); ?></p>
         </div>
           <?php $step_post ++; ?>
@@ -150,7 +150,7 @@
 </div> -->
 
 <!-- Gallery -->
-<div id="gallery" class="container container-small">
+<div id="gallery" class="container container-small text-center">
   <h2>GALLERY</h2>
   <?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '51' ); } ?>
 </div>

@@ -1,7 +1,7 @@
 <!-- Footer -->
-<footer class="container-fluid text-center">
+<footer id="footer" class="container-fluid text-center">
   <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
+    <span class="to-top glyphicon glyphicon-chevron-up"></span>
   </a>
   <h4>Follow Us</h4>
   <a class="" href="https://www.facebook.com/cbus.multimedia" title="Facebook"><i class="fa fa-facebook"></i></a>
