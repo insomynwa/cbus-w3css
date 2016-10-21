@@ -2,7 +2,7 @@ body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
-      background: #000000;
+      background: url('css/bg.png');
   }
   h2 {
       font-size: 24px;
@@ -216,10 +216,23 @@ body {
     background-color: #051A37;
   }
     #footer .to-top {
-      color: #7FFFFF;
+      color: #337AB7;
     }
     #footer h4 {
       color: #7FFFFF;
+    }
+    #footer .to-top {
+      font-size:24px;
+    }
+    #footer .socmed-icon i {
+      font-size:30px;
+    }
+    #footer .to-top:hover, #footer .socmed-icon:hover i {
+      color:#7FFFFF;
+    }
+    #copyright {
+      color: #337AB7;
+      font-size:12px;
     }
 
   .carousel-inner > .item > img,

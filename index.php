@@ -160,28 +160,48 @@
   <h2>CLIENTS</h2>
   <h4>Here, at CBUS, we create a one-stop shop solution for clients, which enables us to provide multimedia services from conceptto execution and delivery.</h4>
   <?php
-    if(get_query_var('paged') ) $paged = get_query_var('paged');
-    if(get_query_var('page') ) $paged = get_query_var('page');
+    // if(get_query_var('paged') ) $paged = get_query_var('paged');
+    // if(get_query_var('page') ) $paged = get_query_var('page');
 
     $query = new WP_Query(
       array(
         'post_type' => 'cbus_clients',
-        'paged'     => $paged
+        //'paged'     => $paged
+        'posts_per_page' => -1,
+        'fields'  => 'ids'
+        )
+      );
+    $image_query = new WP_Query(
+      array(
+        'post_type'     => 'attachment',
+        'post_status'   => 'inherit',
+        'post_mime_type'  => 'image',
+        'posts_per_page'  => -1,
+        'post_parent__in' => $query->posts,
+        'order'           => 'DESC'
         )
       );
     $max_col = 6;
     $step_post = 1;
     $n_post = wp_count_posts('cbus_clients')->publish;
     //var_dump($n_post);
-    if( $query->have_posts() ) : ?>
+    if( $image_query->have_posts() ) : ?>
       <?php 
-      while ( $query->have_posts() ) : ?>
+      while ( $image_query->have_posts() ) : ?>
      <div class="row">
-      <?php for( $i=0; $i<$max_col; $i++): $query->the_post(); ?>
+      <?php for( $i=0; $i<$max_col; $i++): $image_query->the_post(); ?>
+        <?php
+        // $doc = new DOMDocument();
+        //$doc->loadHTML(the_content());
+        // var_dump($query->post->ID);
+        $img_upload = wp_get_attachment_url( get_the_ID() );
+        // var_dump($img_upload);
+        ?>
         <div class="col-sm-2">
-          <?php the_content(); ?>
+          <img src="<?php echo $img_upload; ?>">
+          <?php //the_content(); ?><?php //$img = $doc->getElementsByTagName('img'); var_dump($img); ?>
         </div>
-          <?php $step_post ++; ?>
+          <?php $step_post++; ?>
         <?php if($step_post>$n_post) break; ?>
       <?php endfor; ?>
       </div>
